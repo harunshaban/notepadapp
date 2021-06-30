@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 // import firebase module
 import { AngularFireModule } from '@angular/fire';
@@ -21,8 +22,10 @@ import { RegisterComponent } from './pages/register/register.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
