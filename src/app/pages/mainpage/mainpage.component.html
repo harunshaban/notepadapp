@@ -1,12 +1,101 @@
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid container">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">{{authservice.currentUserName}}</span>
+        </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+        <button class="btn btn-outline-success" (click)="authservice.signout()">Logout</button>
+      </div>
+    </div>
+</nav>
+
+<!-- Create new note from -->
+<div class="container mt-4">
+    <div class="mb-3 col-8 mx-auto">
+        <label class="form-label">Title</label>
+        <input type="text" class="form-control" required>
+    </div>
+    <div class="mb-3 col-8 mx-auto">
+        <label class="form-label">Note</label>
+        <textarea class="form-control" rows="5"></textarea>
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-outline-primary">Save</button>
+    </div>
+</div>
+
+
+<!-- Cards at the moment only for design view purpose -->
+<div class="row mx-5 mt-3">
+    <div class="card mx-2" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+
+        </div>
+    </div>
+    <div class="card mx-2" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+        </div>
+      </div>
+      <div class="card mx-2" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+      <div class="card mx-2" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+        </div>
+      </div>
+      <div class="card mx-2 mt-2" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+        </div>
+      </div>
+      <div class="card mx-2 mt-2" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+        </div>
+      </div>
+      <div class="card mx-2 mt-2" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+        </div>
+      </div>
+      <div class="card mx-2 mt-2" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+        </div>
+      </div>
+</div>
+
+<!-- Display all notes. NOTE: for the moment only user data -->
 <div class="container">
     <div class="row justify-content-center">
         <div class="text-info p-5" *ngIf = "authservice.currentUser">
-            <h2 class="alldata">
-                user information
-            </h2>
+            <h2 class="alldata">user information</h2>
             <h4><b>User ID: </b>{{authservice.currentUserId}}</h4>
             <h4><b>User email: </b>{{authservice.currentUserName}}</h4>
-            <button class="btn-danger" (click)="authservice.signout()">Logout</button>
         </div>
     </div>
 </div>
